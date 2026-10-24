@@ -110,3 +110,20 @@ To regenerate or verify content integrity:
 ```bash
 npm run content:generate
 ```
+
+---
+
+## ☁️ Deploy to Render
+
+This application includes a native `render.yaml` blueprint for seamless deployment on [Render](https://render.com).
+
+### Automatic Deployment Steps:
+1. Log in to [Render Dashboard](https://dashboard.render.com).
+2. Click **New +** and select **Blueprint** (or **Web Service**).
+3. Connect your GitHub repository: `PramodTewatia2007/linalg-mastery`.
+4. Render automatically reads `render.yaml`:
+   - **Environment**: Node
+   - **Build Command**: `npm install && npm run build`
+   - **Start Command**: `npm start`
+   - **Health Check Endpoint**: `/api/health`
+5. Click **Apply** to deploy your live full-stack web application!

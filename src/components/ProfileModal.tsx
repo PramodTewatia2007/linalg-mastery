@@ -7,11 +7,7 @@ import {
   Download,
   Upload,
   RotateCcw,
-  ShieldCheck,
-  CheckCircle2,
-  FileText,
-  Sparkles,
-  Award
+  ShieldCheck
 } from 'lucide-react';
 
 interface ProfileModalProps {
@@ -29,10 +25,10 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
   onUpdateProgress,
   topics,
 }) => {
-  if (!isOpen) return null;
-
   const [importText, setImportText] = useState<string>('');
   const [importStatus, setImportStatus] = useState<string | null>(null);
+
+  if (!isOpen) return null;
 
   const completedTopicsCount = progress.completedTopics.length;
   const completedExamplesCount = progress.completedExamples.length;

@@ -168,7 +168,7 @@ export const ThreeCanvas: React.FC<ThreeCanvasProps> = ({
     isDraggingRef.current = false;
     try {
       (e.target as HTMLElement).releasePointerCapture(e.pointerId);
-    } catch (_) {}
+    } catch {}
   };
 
   const handleWheel = (e: React.WheelEvent) => {

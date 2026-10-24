@@ -1,14 +1,5 @@
-// scripts/buildLinearAlgebraContent.js
-// Generates verified linear algebra solved examples and practice questions
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 // Helper to assemble solved examples and practice questions for each topic
-const topicMetas = [
+export const topicMetas = [
   { id: 1, name: 'Vector Spaces', slug: 'vector-spaces', subtopics: ['vs-axioms', 'vs-examples'] },
   { id: 2, name: 'Subspaces', slug: 'subspaces', subtopics: ['sub-criterion', 'sub-sums'] },
   { id: 3, name: 'Basis and Dimension', slug: 'basis-and-dimension', subtopics: ['basis-indep', 'basis-dim'] },
@@ -23,4 +14,4 @@ const topicMetas = [
   { id: 12, name: 'Skew-Symmetric Bilinear Forms', slug: 'skew-symmetric-bilinear-forms', subtopics: ['sk-alternating', 'sk-symplectic-basis'] },
 ];
 
-console.log('Writing content generator...');
+console.log(`Configured ${topicMetas.length} syllabus topics for content generation.`);

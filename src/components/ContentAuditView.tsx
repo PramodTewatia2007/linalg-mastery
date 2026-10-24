@@ -3,13 +3,10 @@ import { Topic, SolvedExample, PracticeQuestion } from '../types';
 import {
   ShieldCheck,
   CheckCircle2,
-  AlertCircle,
   FileText,
   HelpCircle,
-  Award,
   Layers,
-  BarChart3,
-  TrendingUp
+  BarChart3
 } from 'lucide-react';
 
 interface ContentAuditViewProps {

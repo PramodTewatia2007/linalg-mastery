@@ -16,7 +16,6 @@ export const BasisDimension3DVisualizer: React.FC = () => {
 
   const volume = Math.abs(det);
   const isLinearlyIndependent = Math.abs(det) > 0.05;
-  const dimensionOfSpan = Math.abs(det) > 0.05 ? 3 : 2; // approximation for visual
 
   const sceneObjectsRef = useRef<{
     arrow1?: THREE.ArrowHelper;

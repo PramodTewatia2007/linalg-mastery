@@ -23,9 +23,6 @@ import {
   BookOpen,
   FileCheck,
   HelpCircle,
-  Sparkles,
-  ChevronRight,
-  ShieldCheck,
   Search
 } from 'lucide-react';
 

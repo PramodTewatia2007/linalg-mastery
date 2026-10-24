@@ -25,7 +25,7 @@ export const Transformation3DVisualizer: React.FC = () => {
   const g = matrix[2][0], h = matrix[2][1], i = matrix[2][2];
 
   const det = a * (e * i - f * h) - b * (d * i - f * g) + c * (d * h - e * g);
-  const trace = a + e + i;
+  const _trace = a + e + i;
   const isSingular = Math.abs(det) < 0.001;
   const rank = Math.abs(det) > 0.05 ? 3 : (Math.abs(a) + Math.abs(e) + Math.abs(i) > 0.1 ? 2 : 1);
   const nullity = 3 - rank;

@@ -15,7 +15,7 @@ export function generateExamplesForTopic(topicId) {
 
 function createExample(topicId, index) {
   const id = `ex-t${topicId}-${index}`;
-  const isSecondHalf = index > 8;
+  const _isSecondHalf = index > 8;
 
   switch (topicId) {
     case 1: // Vector spaces

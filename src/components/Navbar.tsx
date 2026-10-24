@@ -1,15 +1,11 @@
 import React from 'react';
 import {
   Compass,
-  BookOpen,
-  CheckCircle2,
   Bookmark,
   FileText,
   Search,
   User,
-  Languages,
-  ShieldCheck,
-  Sparkles
+  ShieldCheck
 } from 'lucide-react';
 import { UserProgress } from '../types';
 

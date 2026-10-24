@@ -411,7 +411,7 @@ function t5Question(id, num, subtopicId, difficulty, skill) {
     },
     {
       title: 'Change of Basis for Vectors vs Operators',
-      problem: `If $P$ is the change of basis matrix from $\\mathcal{B}\'$ to $\\mathcal{B}$ ($[v]_\\mathcal{B} = P [v]_{\\mathcal{B}\'}$), how does the operator matrix transform?`,
+      problem: `If $P$ is the change of basis matrix from $\\mathcal{B}'$ to $\\mathcal{B}$ ($[v]_\\mathcal{B} = P [v]_{\\mathcal{B}'}$), how does the operator matrix transform?`,
       hint: 'Sandwich the matrix between P and P^-1.',
       options: [
         '$[T]_{\\mathcal{B}\'} = P^{-1} [T]_\\mathcal{B} P$',
@@ -778,7 +778,7 @@ function t10Question(id, num, subtopicId, difficulty, skill) {
   const templates = [
     {
       title: 'Bilinear Form Matrix Transformation Law',
-      problem: `Under a change of basis with transition matrix $P$ ($[v] = P [v\']$), the matrix $A$ of a bilinear form transforms according to which formula?`,
+      problem: `Under a change of basis with transition matrix $P$ ($[v] = P [v']$), the matrix $A$ of a bilinear form transforms according to which formula?`,
       hint: 'Remember: bilinear forms transform by congruence, not similarity.',
       options: [
         '$A\' = P^T A P$ (Congruence)',
@@ -872,7 +872,7 @@ function t11Question(id, num, subtopicId, difficulty, skill) {
     },
     {
       title: 'Sylvester\'s Law of Inertia Signature',
-      problem: `According to Sylvester\'s Law of Inertia, any real symmetric bilinear form can be transformed by congruence into a diagonal matrix with entries from $\\{+1, -1, 0\\}$. What is invariant?`,
+      problem: `According to Sylvester's Law of Inertia, any real symmetric bilinear form can be transformed by congruence into a diagonal matrix with entries from $\\{+1, -1, 0\\}$. What is invariant?`,
       hint: 'The triple (p, q, r) count.',
       options: [
         'The numbers $p$ (positive), $q$ (negative), and $r$ (zero) diagonal entries are strictly invariant',

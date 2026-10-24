@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { PracticeQuestion, Difficulty, SkillType, UserProgress } from '../types';
+import { PracticeQuestion, UserProgress } from '../types';
 import { MathRenderer } from './MathRenderer';
 import {
   HelpCircle,
@@ -11,10 +11,7 @@ import {
   Eye,
   EyeOff,
   Lightbulb,
-  Check,
-  ShieldCheck,
-  Sparkles,
-  ChevronRight
+  Sparkles
 } from 'lucide-react';
 
 interface PracticeSectionProps {
@@ -26,7 +23,7 @@ interface PracticeSectionProps {
 }
 
 export const PracticeSection: React.FC<PracticeSectionProps> = ({
-  topicId,
+  topicId: _topicId,
   questions,
   progress,
   onAnswerQuestion,

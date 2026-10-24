@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { QuizQuestion, UserProgress } from '../types';
+import { QuizQuestion } from '../types';
 import { MathRenderer } from './MathRenderer';
 import confetti from 'canvas-confetti';
 import {
@@ -31,13 +31,13 @@ export const QuizModal: React.FC<QuizModalProps> = ({
   onSaveScore,
   languageMode,
 }) => {
-  if (!isOpen) return null;
-
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isAnswerSubmitted, setIsAnswerSubmitted] = useState<boolean>(false);
   const [score, setScore] = useState<number>(0);
   const [isFinished, setIsFinished] = useState<boolean>(false);
+
+  if (!isOpen) return null;
 
   const currentQ = questions[currentIndex];
 
@@ -68,7 +68,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
           spread: 70,
           origin: { y: 0.6 },
         });
-      } catch (_) {}
+      } catch {}
     }
   };
 

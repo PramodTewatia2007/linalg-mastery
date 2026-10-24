@@ -7,8 +7,7 @@ import {
   Filter,
   Copy,
   Check,
-  ExternalLink,
-  BookOpen
+  ExternalLink
 } from 'lucide-react';
 
 interface FormulaReferenceProps {

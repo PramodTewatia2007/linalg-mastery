@@ -5,7 +5,6 @@ import {
   Bookmark,
   Trash2,
   ExternalLink,
-  HelpCircle,
   Lightbulb,
   CheckCircle2
 } from 'lucide-react';

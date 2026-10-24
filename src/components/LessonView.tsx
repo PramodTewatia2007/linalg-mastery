@@ -10,8 +10,6 @@ import {
   Cpu,
   CheckCircle,
   Circle,
-  HelpCircle,
-  PlayCircle,
   ArrowRight,
   BookOpen
 } from 'lucide-react';
@@ -33,7 +31,7 @@ export const LessonView: React.FC<LessonViewProps> = ({
   onToggleComplete,
   onOpenQuiz,
   languageMode,
-  onNextTopic,
+  onNextTopic: _onNextTopic,
   onGoToExamples,
   onGoToPractice,
 }) => {

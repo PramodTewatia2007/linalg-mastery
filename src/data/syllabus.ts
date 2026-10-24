@@ -107,7 +107,7 @@ export const syllabusTopics: Topic[] = [
             whyItHappens: 'Confusing affine geometric planes with linear subspaces passing through the origin.'
           }
         ],
-        geometricIntuition: 'In $\\mathbb{R}^3$, the only subspaces are the origin $\{0\}$, straight lines passing through $(0,0,0)$, flat planes passing through $(0,0,0)$, and the whole space $\\mathbb{R}^3$.',
+        geometricIntuition: 'In $\\mathbb{R}^3$, the only subspaces are the origin $\\{0\\}$, straight lines passing through $(0,0,0)$, flat planes passing through $(0,0,0)$, and the whole space $\\mathbb{R}^3$.',
         applications: ['Null spaces of linear systems', 'Kernel of differential operators', 'Equilibrium manifolds']
       },
       {
@@ -625,7 +625,7 @@ export const syllabusTopics: Topic[] = [
       {
         id: 'bf-non-deg-rad',
         title: 'Non-Degeneracy, Rank & Radicals',
-        englishOverview: 'The left radical is $\\text{rad}_L(B) = \\{u \\in V \\mid B(u, v) = 0 \\; \\forall v \\in V\\}$. A bilinear form is non-degenerate if its radical is $\{0\}$, which is equivalent to its representation matrix having non-zero determinant $\\det(A) \\neq 0$.',
+        englishOverview: 'The left radical is $\\text{rad}_L(B) = \\{u \\in V \\mid B(u, v) = 0 \\; \\forall v \\in V\\}$. A bilinear form is non-degenerate if its radical is $\\{0\\}$, which is equivalent to its representation matrix having non-zero determinant $\\det(A) \\neq 0$.',
         hinglishOverview: 'Radical aise vectors ka set hota hai jo pure space ke har vector ke saath zero evaluate karte hain. Agar radical sirf $\\{0\\}$ ho, toh form non-degenerate kehlaati hai, jiska matlab matrix invertible hai ($\\det(A) \\neq 0$).',
         definitions: [
           {

@@ -6,7 +6,7 @@ import { MathRenderer } from '../MathRenderer';
 export const Subspace3DVisualizer: React.FC = () => {
   const [subspaceType, setSubspaceType] = useState<'plane-origin' | 'plane-offset' | 'line-origin' | 'line-offset'>('plane-origin');
   const [offsetD, setOffsetD] = useState<number>(0);
-  const [normalVec, setNormalVec] = useState<[number, number, number]>([0, 1, 0]);
+  const [normalVec] = useState<[number, number, number]>([0, 1, 0]);
 
   const sceneObjectsRef = useRef<{
     planeMesh?: THREE.Mesh;

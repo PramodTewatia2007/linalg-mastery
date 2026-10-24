@@ -1,9 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { SolvedExample, Difficulty, SkillType, UserProgress } from '../types';
+import { SolvedExample, UserProgress } from '../types';
 import { MathRenderer } from './MathRenderer';
 import {
-  CheckCircle2,
-  Circle,
   Filter,
   Search,
   Check,
@@ -23,7 +21,7 @@ interface ExamplesSectionProps {
 }
 
 export const ExamplesSection: React.FC<ExamplesSectionProps> = ({
-  topicId,
+  topicId: _topicId,
   examples,
   progress,
   onToggleCompleteExample,

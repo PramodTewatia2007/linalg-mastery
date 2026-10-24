@@ -6,9 +6,7 @@ import {
   Clock,
   Layers,
   HelpCircle,
-  FileCheck,
-  ChevronRight,
-  BookMarked
+  FileCheck
 } from 'lucide-react';
 
 interface SidebarProps {

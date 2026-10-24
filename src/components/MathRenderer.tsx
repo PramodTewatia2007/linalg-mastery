@@ -18,14 +18,14 @@ export const MathRenderer: React.FC<MathRendererProps> = ({ content, className =
           throwOnError: false,
           displayMode: false,
         });
-      } catch (err) {
+      } catch {
         return `<span class="text-rose-400">[Math Error: ${content}]</span>`;
       }
     }
 
     // Split content by $$ ... $$ (display math) and $ ... $ (inline math)
     // Regex matches $$...$$ or $...$
-    const mathRegex = /(\$\$[\s\S]+?\$\$|\$[^\$]+?\$)/g;
+    const mathRegex = /(\$\$[\s\S]+?\$\$|\$[^$]+?\$)/g;
     const parts = content.split(mathRegex);
 
     return parts
@@ -38,7 +38,7 @@ export const MathRenderer: React.FC<MathRendererProps> = ({ content, className =
               throwOnError: false,
               displayMode: true,
             })}</div>`;
-          } catch (e) {
+          } catch {
             return `<div class="text-rose-400">[Display Math Error: ${rawMath}]</div>`;
           }
         } else if (part.startsWith('$') && part.endsWith('$')) {
@@ -48,7 +48,7 @@ export const MathRenderer: React.FC<MathRendererProps> = ({ content, className =
               throwOnError: false,
               displayMode: false,
             });
-          } catch (e) {
+          } catch {
             return `<span class="text-rose-400">[Math Error: ${rawMath}]</span>`;
           }
         } else {

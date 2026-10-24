@@ -1,0 +1,63 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    name: Build, Lint & Verify
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Linter
+        run: npm run lint
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Build Application
+        run: npm run build
+
+      - name: Verify Build Artifacts
+        run: |
+          test -f dist/index.html || { echo "dist/index.html missing"; exit 1; }
+          node -e "
+            import fs from 'fs';
+            import path from 'path';
+            const exRaw = fs.readFileSync('src/data/examplesData.ts', 'utf-8');
+            const qRaw = fs.readFileSync('src/data/questionsData.ts', 'utf-8');
+            const exJson = exRaw.replace(/^import[^\n]+\n+export const solvedExamplesData: SolvedExample\[\] = /, '').replace(/;\s*$/, '');
+            const qJson = qRaw.replace(/^import[^\n]+\n+export const practiceQuestionsData: PracticeQuestion\[\] = /, '').replace(/;\s*$/, '');
+            const ex = JSON.parse(exJson);
+            const q = JSON.parse(qJson);
+            console.log('Verified data: ' + ex.length + ' examples, ' + q.length + ' questions.');
+          "
+
+  deploy-render:
+    name: Deploy to Render
+    needs: build-and-test
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Render Deploy Hook (if configured)
+        if: env.RENDER_DEPLOY_HOOK_URL != ''
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          curl -f -X POST "$RENDER_DEPLOY_HOOK_URL"
