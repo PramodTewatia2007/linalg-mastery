@@ -1,5 +1,5 @@
 # Linear Algebra Mastery | Full-Stack Web Application
-
+![image alt](https://github.com/PramodTewatia2007/linalg-mastery/blob/1cde6778f96fe7486eca1b95a95ed433e1b13ba9/linear%20alzebra.png)
 An approachable, mathematically rigorous full-stack learning platform for students and practitioners studying Linear Algebra. Taught in clear, human-friendly **English** and natural **Hinglish**, with step-by-step mathematical derivations, interactive **3D WebGL / Three.js geometry**, **192 fully solved examples**, **552 practice questions**, quizzes, formula references, and an automated **Content Audit Dashboard**.
 
 ---
